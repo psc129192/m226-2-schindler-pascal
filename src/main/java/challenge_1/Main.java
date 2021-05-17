@@ -6,6 +6,7 @@ public class Main {
         ColoredPoint p2 = new ColoredPoint(1, 1, false);
 
         compare(p1, p2);
+        compare2(p1, p2);
     }
 
     private static void compare(Point p1, Point p2) {
