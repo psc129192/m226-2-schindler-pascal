@@ -1,10 +1,8 @@
 package paint;
 
-import paint.figuren.Figur;
-import paint.figuren.Kreis;
-import paint.figuren.Linie;
-import paint.figuren.Rechteck;
+import paint.figuren.*;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,6 +34,11 @@ public class FigurParser {
                     int endx = Integer.valueOf(figurData[3]);
                     int endy = Integer.valueOf(figurData[4]);
                     figuren.add(new Linie(x, y, endx, endy));
+                    break;
+                case "Dreieck":
+                    Point pointY = new Point(Integer.valueOf(figurData[3]), Integer.valueOf(figurData[4]));
+                    Point pointZ = new Point(Integer.valueOf(figurData[5]), Integer.valueOf(figurData[6]));
+                    figuren.add(new Dreieck(x,y,pointY.x, pointY.y, pointZ.x, pointZ.y));
                     break;
             }
             figurData = dao.readNextFigurData();
