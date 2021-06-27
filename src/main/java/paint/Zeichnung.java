@@ -1,13 +1,14 @@
 package paint;
 
+import paint.figuren.Figur;
+
 import java.awt.*;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Zeichnung {
-    private ArrayList<Figur> figuren;
+    private List<Figur> figuren;
 
-    public Zeichnung(ArrayList<Figur> figuren) {
+    public Zeichnung(List<Figur> figuren) {
         this.figuren = figuren;
     }
 

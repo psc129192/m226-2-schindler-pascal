@@ -1,4 +1,4 @@
-package paint;
+package paint.figuren;
 
 import java.awt.*;
 
