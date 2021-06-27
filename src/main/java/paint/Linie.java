@@ -1,5 +1,7 @@
 package paint;
 
+import java.awt.*;
+
 public class Linie extends Figur {
     private int endX;
     private int endY;
@@ -31,5 +33,10 @@ public class Linie extends Figur {
         super.move(deltaX, deltaY);
         this.endX += deltaX;
         this.endY += deltaY;
+    }
+
+    @Override
+    public void zeichnen(Graphics g) {
+        g.drawLine(getX(), getY(), endX, endY);
     }
 }

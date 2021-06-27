@@ -1,5 +1,7 @@
 package paint;
 
+import java.awt.*;
+
 public class Kreis extends Figur {
     private int durchmesser;
 
@@ -14,5 +16,10 @@ public class Kreis extends Figur {
 
     public void setDurchmesser(int durchmesser) {
         this.durchmesser = durchmesser;
+    }
+
+    @Override
+    public void zeichnen(Graphics g) {
+        g.drawOval(getX(), getY(), durchmesser, durchmesser);
     }
 }

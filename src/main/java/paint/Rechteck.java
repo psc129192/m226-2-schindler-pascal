@@ -1,5 +1,7 @@
 package paint;
 
+import java.awt.*;
+
 public class Rechteck extends Figur {
     private int breite;
     private int hoehe;
@@ -24,5 +26,10 @@ public class Rechteck extends Figur {
 
     public void setHoehe(int hoehe) {
         this.hoehe = hoehe;
+    }
+
+    @Override
+    public void zeichnen(Graphics g) {
+        g.drawRect(getX(),getY(),breite,hoehe);
     }
 }

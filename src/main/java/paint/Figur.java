@@ -1,5 +1,7 @@
 package paint;
 
+import java.awt.*;
+
 public abstract class Figur {
     protected int x;
     protected int y;
@@ -22,4 +24,5 @@ public abstract class Figur {
         this.y += deltaY;
     }
 
+    public abstract void zeichnen(Graphics g);
 }
