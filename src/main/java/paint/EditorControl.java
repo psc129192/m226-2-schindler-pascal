@@ -1,12 +1,10 @@
 package paint;
 
-import paint.figuren.Dreieck;
-import paint.figuren.Kreis;
-import paint.figuren.Linie;
-import paint.figuren.Rechteck;
+import paint.figuren.*;
 
 import java.awt.Graphics;
 import java.awt.Point;
+import java.util.List;
 
 
 final class EditorControl {
@@ -46,6 +44,21 @@ final class EditorControl {
                 break;
         }
 
+        Grafikeditor.frame.repaint();
+    }
+
+    public void loeschen() {
+        zeichnung.loeschen();
+        Grafikeditor.frame.repaint();
+    }
+
+    public void importieren() {
+        FigurParser parser = new FigurParser(new FigurFileDAO());
+        List<Figur> figurenAusFile = parser.parse();
+
+        for (Figur figur : figurenAusFile) {
+            zeichnung.hinzufuegen(figur);
+        }
         Grafikeditor.frame.repaint();
     }
 }

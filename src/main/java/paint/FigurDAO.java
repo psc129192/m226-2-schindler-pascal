@@ -1,5 +1,5 @@
 package paint;
 
 public interface FigurDAO {
-    String[] readNextFigurData();
+    public String[] readNextFigurData();
 }

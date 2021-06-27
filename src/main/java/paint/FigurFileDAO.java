@@ -19,12 +19,13 @@ public class FigurFileDAO implements FigurDAO {
         }
     }
 
+    @Override
     public String[] readNextFigurData() {
         if (in != null) {
             try {
                 String line = in.readLine();
                 if (line != null && !line.isEmpty())
-                    return line.split("\\s");
+                    return line.split(",");
             } catch (IOException e) {
                 e.printStackTrace();
             }

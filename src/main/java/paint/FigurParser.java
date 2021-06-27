@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FigurParser {
-    private FigurFileDAO dao;
+    private FigurDAO dao;
 
-    public FigurParser(FigurFileDAO dao) {
+    public FigurParser(FigurDAO dao) {
         this.dao = dao;
     }
 

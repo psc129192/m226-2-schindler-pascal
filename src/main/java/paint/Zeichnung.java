@@ -26,7 +26,7 @@ public class Zeichnung {
         figuren.add(figur);
     }
 
-    public void loeschen(Figur figur) {
-        figuren.remove(figur);
+    public void loeschen() {
+        figuren.clear();
     }
 }

@@ -29,21 +29,29 @@ final class EditorFrame extends JFrame {
         Button kreisBtn = new Button("Kreis");
         Button linieBtn = new Button("Linie");
         Button dreieckBtn = new Button("Dreieck");
+        Button loeschenBtn = new Button("Loeschen");
+        Button importBtn = new Button("Importieren");
 
         panel.add(rechteckBtn);
         panel.add(kreisBtn);
         panel.add(linieBtn);
         panel.add(dreieckBtn);
+        panel.add(loeschenBtn);
+        panel.add(importBtn);
 
         rechteckBtn.setFocusable(false);
         kreisBtn.setFocusable(false);
         linieBtn.setFocusable(false);
         dreieckBtn.setFocusable(false);
+        loeschenBtn.setFocusable(false);
+        importBtn.setFocusable(false);
 
         rechteckBtn.addActionListener(e -> editorControl.setFigurTyp('r'));
         kreisBtn.addActionListener(e -> editorControl.setFigurTyp('k'));
         linieBtn.addActionListener(e -> editorControl.setFigurTyp('l'));
         dreieckBtn.addActionListener(e -> editorControl.setFigurTyp('d'));
+        loeschenBtn.addActionListener(e -> editorControl.loeschen());
+        importBtn.addActionListener(e -> editorControl.importieren());
 
         setContentPane(panel);
     }
