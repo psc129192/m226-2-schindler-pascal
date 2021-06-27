@@ -9,6 +9,9 @@ public class Main {
         Linie linie = new Linie(60,30,120,120);
         Kreis kreis = new Kreis(100,100,40);
 
+        rechteck.move(100,100);
+        linie.move(100,100);
+
         display.hinzufuegen(rechteck);
         display.hinzufuegen(rechteck2);
         display.hinzufuegen(linie);

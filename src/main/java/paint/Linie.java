@@ -25,4 +25,11 @@ public class Linie extends Figur {
     public void setEndY(int endY) {
         this.endY = endY;
     }
+
+    @Override
+    public void move(int deltaX, int deltaY) {
+        super.move(deltaX, deltaY);
+        this.endX += deltaX;
+        this.endY += deltaY;
+    }
 }
