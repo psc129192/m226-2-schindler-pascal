@@ -16,7 +16,7 @@ public class Dreieck extends Figur {
     @Override
     public void move(int deltaX, int deltaY) {
         super.move(deltaX, deltaY);
-        for(int i = 0; i < DIMENSION; i++) {
+        for (int i = 0; i < DIMENSION; i++) {
             this.xKoordinaten[i] += deltaX;
             this.yKoordinaten[i] += deltaY;
         }

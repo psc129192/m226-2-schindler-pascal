@@ -30,6 +30,6 @@ public class Rechteck extends Figur {
 
     @Override
     public void zeichnen(Graphics g) {
-        g.drawRect(getX(),getY(),breite,hoehe);
+        g.drawRect(getX(), getY(), breite, hoehe);
     }
 }
